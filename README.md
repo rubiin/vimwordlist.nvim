@@ -9,9 +9,11 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim) in lua
 {
 
   {"rubiin/vimwordlist.nvim", version = "*",
-    config = function()
+    build = function()
       require("vimwordlist").update_spell_file()
-      vim.opt.spelllang:append("vim")
+    end
+    config = function()
+        vim.opt.spelllang:append("vim")
     end
   }
 }
