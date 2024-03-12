@@ -1,5 +1,3 @@
-WIP: DO NOT USE
-
 ## Installation
 
 
@@ -7,8 +5,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim) in lua
 
 ```lua
 {
-
-  {"rubiin/vimwordlist.nvim", version = "*",
+{"rubiin/vimwordlist.nvim",
     build = function()
       require("vimwordlist").update_spell_file()
     end
