@@ -1,4 +1,4 @@
-Simple plugin that add and dynamically updateable spellcheck dictionary for vim and neovim keywords.
+Simple plugin that adds and dynamically updates spellcheck dictionary for vim and neovim keywords.
 ## Installation
 
 Using [lazy.nvim](https://github.com/folke/lazy.nvim) in lua
