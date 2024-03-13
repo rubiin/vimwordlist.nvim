@@ -77,18 +77,16 @@ function M.update_spell_file()
     end
   end
 
-  local spell_dir = vim.fn.stdpath("config") .. "/spell"
-  local word_file = spell_dir .. "/vimwords.word"
+  local spell_dir = fn.stdpath("config") .. "/spell"
+  local word_file = os.tmpname()
 
   local word_list = io.open(word_file, "w")
 
   if word_list then
     word_list:write(words)
     word_list:close()
-    print(" Updated wordlist: " .. word_file)
-    vim.cmd("mkspell! " .. spell_dir .. " " .. word_file)
-    os.remove(word_file)
-    os.rename(vim.fn.stdpath("config") .. "/spell.utf-8.spl", vim.fn.stdpath("config") .. "/spell/vim.utf-8.spl")
+    vim.cmd("mkspell! " .. spell_dir .. "/vim " .. word_file)
+    vim.notify("Vim word list updated.")
   else
     vim.notify("Error: Could not open file for writing: " .. word_file)
   end
