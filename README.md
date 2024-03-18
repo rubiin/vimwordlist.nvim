@@ -16,4 +16,6 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim) in lua
 }
 ```
 
+The plugin also exposes `GenerateVimSpell` user command that can be called to update the spell file manually.
+
 Forked from https://github.com/norseghost/nvimwordlist as it was no longer working
