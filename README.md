@@ -4,8 +4,9 @@ Simple plugin that adds and dynamically updates spellcheck dictionary for vim an
 Using [lazy.nvim](https://github.com/folke/lazy.nvim) in lua
 
 ```lua
-{
+
 {"rubiin/vimwordlist.nvim",
+    cmd="GenerateVimSpell",
     build = function()
       require("vimwordlist").update_spell_file()
     end
@@ -13,7 +14,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim) in lua
         vim.opt.spelllang:append("vim")
     end
   }
-}
+
 ```
 
 The plugin also exposes `GenerateVimSpell` user command that can be called to update the spell file manually.
