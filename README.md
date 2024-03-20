@@ -5,14 +5,13 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim) in lua
 
 ```lua
 
-{"rubiin/vimwordlist.nvim",
-    cmd="GenerateVimSpell",
-    build = function()
-      require("vimwordlist").update_spell_file()
-    end
+  {
+    "rubiin/vimwordlist.nvim",
+    cmd = "GenerateVimSpell",
+    build = ":GenerateVimSpell",
     config = function()
-        vim.opt.spelllang:append("vim")
-    end
+      vim.opt.spelllang:append("vim")
+    end,
   }
 
 ```
