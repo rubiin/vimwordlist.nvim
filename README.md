@@ -8,9 +8,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim) in lua
   {
     "rubiin/vimwordlist.nvim",
     cmd = "GenerateVimSpell",
-    build = function()
-      require("vimwordlist").update_spell_file()
-    end,
+    build = ":GenerateVimSpell",
     config = function()
       vim.opt.spelllang:append("vim")
     end,
