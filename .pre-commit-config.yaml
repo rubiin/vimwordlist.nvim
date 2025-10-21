@@ -6,7 +6,11 @@ repos:
     rev: v2.3.0  # Use latest stable version
     hooks:
       - id: stylua
-        files: \.lua$
+        name: Stylua Lua formatter
+        entry: stylua
+        language: system
+        types: [lua]
+        files: "\\.lua$"  # Will match all .lua files recursively
         args: ["--config-path", ".stylua.toml"]  # Optional: if you have a stylua config
 
   - repo: https://github.com/biomejs/pre-commit
